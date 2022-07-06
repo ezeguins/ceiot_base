@@ -388,4 +388,5 @@ Sería conveniente quitar de main.c cualquier elemento variable para no afectar 
 ### DHT11 explícito &#10004;
 
 Renombrar esp32 a esp32-dht11 
+linea agregada para git
 
