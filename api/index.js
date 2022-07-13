@@ -16,11 +16,14 @@ async function startDatabase() {
     const uri = mongod.getUri();	
     const connection = await MongoClient.connect(uri, {useNewUrlParser: true});
     database = connection.db();
+    console.log("base de datos creada - Debugging Ezequiel G")
 }
 
 async function getDatabase() {
     if (!database) await startDatabase();
+    console.log("base de datos obtenida - Debugging Ezequiel G")
     return database;
+    
 }
 
 async function insertMeasurement(message) {
@@ -191,6 +194,7 @@ startDatabase().then(async() => {
     db.public.none("INSERT INTO users VALUES ('2','Beto','user123')");
 
     console.log("sql device database up");
+    console.log("database users: Ana, Beto - Fake devices: 0, 1 - Debugging Ezequiel G")
 
     app.listen(PORT, () => {
         console.log(`Listening at ${PORT}`);
